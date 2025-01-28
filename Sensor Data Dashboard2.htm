@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">jquery[3.6.0];shiny-css[1.8.1.1];shiny-javascript[1.8.1.1];selectize[0.15.2];htmltools-fill[0.5.8.1];htmlwidgets[1.6.4];plotly-binding[4.10.4];bootstrap[3.4.1]</script>
+<script src="jquery-3.6.0/jquery.min.js"></script>
+<link href="shiny-css-1.8.1.1/shiny.min.css" rel="stylesheet" />
+<script src="shiny-javascript-1.8.1.1/shiny.min.js"></script>
+<link href="selectize-0.15.2/css/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="selectize-0.15.2/js/selectize.min.js"></script>
+<script src="selectize-0.15.2/accessibility/js/selectize-plugin-a11y.min.js"></script>
+<link href="htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="plotly-binding-4.10.4/plotly.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="bootstrap-3.4.1/accessibility/css/bootstrap-accessibility.min.css" rel="stylesheet" />
+<script src="bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script src="bootstrap-3.4.1/accessibility/js/bootstrap-accessibility.min.js"></script>  <title>Sensor Data Dashboard</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <h2>Sensor Data Dashboard</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <form class="well" role="complementary">
+          <div class="form-group shiny-input-container">
+            <label class="control-label" id="variable-label" for="variable">Select Variable:</label>
+            <div>
+              <select id="variable" class="shiny-input-select"><option value="DWD">DWD</option>
+<option value="WS">WS</option>
+<option value="GS">GS</option>
+<option value="Xaxis">Xaxis</option>
+<option value="Yaxis">Yaxis</option>
+<option value="AT" selected>AT</option>
+<option value="VP">VP</option>
+<option value="ATM">ATM</option>
+<option value="VPD">VPD</option>
+<option value="RP">RP</option>
+<option value="SR">SR</option>
+<option value="SM1">SM1</option>
+<option value="ST1">ST1</option>
+<option value="SM2">SM2</option>
+<option value="ST2">ST2</option>
+<option value="SM3">SM3</option>
+<option value="ST3">ST3</option>
+<option value="SM4">SM4</option>
+<option value="ST4">ST4</option>
+<option value="HarvestYear">HarvestYear</option>
+<option value="SowYear">SowYear</option>
+<option value="HarvestNumber">HarvestNumber</option>
+<option value="latitude">latitude</option>
+<option value="longitude">longitude</option>
+<option value="FW">FW</option>
+<option value="DW">DW</option>
+<option value="DMP">DMP</option>
+<option value="NE">NE</option>
+<option value="NT">NT</option>
+<option value="bbch">bbch</option>
+<option value="wh">wh</option></select>
+              <script type="application/json" data-for="variable" data-nonempty="">{"plugins":["selectize-plugin-a11y"]}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" id="group-label" for="group">Group By:</label>
+            <div>
+              <select id="group" class="shiny-input-select"><option value="Wtype" selected>Wtype</option>
+<option value="Distance">Distance</option></select>
+              <script type="application/json" data-for="group" data-nonempty="">{"plugins":["selectize-plugin-a11y"]}</script>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-8" role="main">
+        <div class="plotly html-widget html-widget-output shiny-report-size shiny-report-theme html-fill-item" id="time_series_plot" style="width:100%;height:400px;"></div>
+        <div class="plotly html-widget html-widget-output shiny-report-size shiny-report-theme html-fill-item" id="distribution_plot" style="width:100%;height:400px;"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
